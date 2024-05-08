@@ -18,7 +18,7 @@ public class Music {
 		j.setMapperClass(MapforProg.class);
 		j.setReducerClass(ReduceforProg.class);
 		j.setOutputKeyClass(Text.class) ;
-		j.setOutputValueClass(DoubleWritable.class);
+		j.setOutputValueClass(IntWritable.class);
 		FileInputFormat.addInputPath(j,input) ;
 		FileOutputFormat.setOutputPath(j,output) ;
 		System.exit(j.waitForCompletion(true)?0:1) ;
